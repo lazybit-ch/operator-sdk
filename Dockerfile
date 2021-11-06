@@ -1,16 +1,16 @@
-FROM golang:1.17.3-alpine3.14
+FROM golang:1.17.3-bullseye
 
 ARG OPERATOR_SDK_VERSION
 ENV OPERATOR_SDK_VERSION=${OPERATOR_SDK_VERSION:-1.14.0}
 
-RUN apk add --no-cache \
-        bash=5.1.4-r0 \
-        ca-certificates=20191127-r5 \
-        curl=7.79.1-r0 \
-        gcc=10.3.1_git20210424-r2 \
-        git=2.32.0-r0 \
-        make=4.3-r0 \
-        musl-dev=1.2.2-r3
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        ca-certificates=20210119 \
+        curl=7.74.0-1.3+b1 \
+        gcc=4:10.2.1-1 \
+        git=1:2.30.2-1 \
+        make=4.3-4.1 && \
+    apt-get clean
 
 # hadolint ignore=DL3059
 RUN curl -Lo /usr/local/bin/operator-sdk https://github.com/operator-framework/operator-sdk/releases/download/v${OPERATOR_SDK_VERSION}/operator-sdk_linux_amd64 && \
