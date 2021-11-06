@@ -4,7 +4,7 @@ ARG OPERATOR_SDK_VERSION
 ENV OPERATOR_SDK_VERSION=${OPERATOR_SDK_VERSION:-1.14.0}
 
 RUN apk add --no-cache \
-        bash=5.1.0-r0 \
+        bash=5.1.4-r0 \
         ca-certificates=20191127-r5 \
         curl=7.77.0-r0 \
         gcc=10.2.1_pre1-r3 \
