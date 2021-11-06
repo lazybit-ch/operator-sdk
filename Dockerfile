@@ -10,7 +10,7 @@ RUN apk add --no-cache \
         gcc=10.3.1_git20210424-r2 \
         git=2.32.0-r0 \
         make=4.3-r0 \
-        musl-dev=1.2.2-r0
+        musl-dev=1.2.2-r3
 
 # hadolint ignore=DL3059
 RUN curl -Lo /usr/local/bin/operator-sdk https://github.com/operator-framework/operator-sdk/releases/download/v${OPERATOR_SDK_VERSION}/operator-sdk_linux_amd64 && \
