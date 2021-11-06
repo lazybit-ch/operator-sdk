@@ -7,7 +7,7 @@ RUN apk add --no-cache \
         bash=5.1.4-r0 \
         ca-certificates=20191127-r5 \
         curl=7.79.1-r0 \
-        gcc=10.2.1_pre1-r3 \
+        gcc=10.3.1_git20210424-r2 \
         git=2.30.2-r0 \
         make=4.3-r0 \
         musl-dev=1.2.2-r0
